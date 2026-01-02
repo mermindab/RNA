@@ -1,0 +1,1740 @@
+
+<!-- saved from url=(0107)file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+<link rel="Edit-Time-Data" href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RedesNeuronalesArtificiales2007/clase1/RNA01_archivos/editdata.mso">
+<link rel="OLE-Object-Data" href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RedesNeuronalesArtificiales2007/clase1/RNA01_archivos/oledata.mso">
+<title>Redes Neuronales Artificiales I</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Shell Dlg";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black; margin-left:0cm; margin-right:0cm; margin-top:0cm}
+.numero      { font-family: Arial; font-size: 10pt; list-style-type: lower-roman }
+h1
+	{mso-style-next:Normal;
+	mso-margin-top-alt:auto;
+	margin-right:30.6pt;
+	mso-margin-bottom-alt:auto;
+	margin-left:36.0pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	mso-font-kerning:0pt;
+	font-weight:bold;}
+h2
+	{mso-style-next:Normal;
+	mso-margin-top-alt:auto;
+	margin-right:30.6pt;
+	mso-margin-bottom-alt:auto;
+	margin-left:36.0pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:30.6pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.4pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{mso-margin-top-alt:auto;
+	margin-right:30.6pt;
+	mso-margin-bottom-alt:auto;
+	margin-left:36.0pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:red;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#FFA87D;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.vineta, li.vineta, div.vineta
+	{mso-style-name:vineta;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:82.35pt;
+	margin-bottom:.0001pt;
+	text-indent:-1.0cm;
+	mso-pagination:widow-orphan;
+	mso-list:l7 level1 lfo2;
+	tab-stops:list 82.35pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:136728166;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1673844740 251798180 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l0:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:250161333;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2070013738 1058587854 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l1:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:71.4pt;
+	mso-level-number-position:left;
+	margin-left:71.4pt;
+	text-indent:-36.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:291912304;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-570255402 -643298 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l2:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-36.0pt;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:644046586;
+	mso-list-type:hybrid;
+	mso-list-template-ids:966850496 1111402600 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l3:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:107.4pt;
+	mso-level-number-position:left;
+	margin-left:107.4pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:723018949;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-237472164 493397904 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l4:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5
+	{mso-list-id:1227840737;
+	mso-list-type:hybrid;
+	mso-list-template-ids:820934570 -442602612 1485360138 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l5:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:71.4pt;
+	mso-level-number-position:left;
+	margin-left:71.4pt;
+	text-indent:-36.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;}
+@list l5:level2
+	{mso-level-text:"%2\)";
+	mso-level-tab-stop:89.4pt;
+	mso-level-number-position:left;
+	margin-left:89.4pt;
+	text-indent:-18.0pt;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;}
+@list l5:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l5:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6
+	{mso-list-id:1335499540;
+	mso-list-type:hybrid;
+	mso-list-template-ids:47354080 -628985730 201981977 201981979 201981967 201981977 201981979 201981967 201981977 201981979;}
+@list l6:level1
+	{mso-level-number-format:roman-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-36.0pt;}
+@list l6:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l6:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7
+	{mso-list-id:1549800625;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-607250070 276232052 537526275 537526277 537526273 537526275 537526277 537526273 537526275 537526277;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:vineta;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:82.35pt;
+	mso-level-number-position:left;
+	margin-left:82.35pt;
+	text-indent:-1.0cm;
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l7:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabla normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+table.MsoTableGrid
+	{mso-style-name:"Tabla con cuadrícula";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <u1:DocumentProperties>
+  <u1:Author>José Ali Moreno</u1:Author>
+  <u1:LastAuthor>Maritza Bracho</u1:LastAuthor>
+  <u1:Revision>8</u1:Revision>
+  <u1:TotalTime>231</u1:TotalTime>
+  <u1:Created>2006-01-19T12:07:00Z</u1:Created>
+  <u1:LastSaved>2006-01-19T12:17:00Z</u1:LastSaved>
+  <u1:Pages>1</u1:Pages>
+  <u1:Words>1640</u1:Words>
+  <u1:Characters>9024</u1:Characters>
+  <u1:Manager>Laboratorio de Computación Emergente</u1:Manager>
+  <u1:Company>UCV</u1:Company>
+  <u1:Lines>75</u1:Lines>
+  <u1:Paragraphs>21</u1:Paragraphs>
+  <u1:CharactersWithSpaces>10643</u1:CharactersWithSpaces>
+  <u1:Version>10.2625</u1:Version>
+ </u1:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <u2:WordDocument>
+  <u2:Zoom>0</u2:Zoom>
+  <u2:SpellingState>Clean</u2:SpellingState>
+  <u2:GrammarState>Clean</u2:GrammarState>
+  <u2:HyphenationZone>21</u2:HyphenationZone>
+  <u2:BrowserLevel>MicrosoftInternetExplorer4</u2:BrowserLevel>
+ </u2:WordDocument>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <u3:shapedefaults v:ext="edit" spidmax="7170"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <u4:shapelayout v:ext="edit">
+  <u4:idmap v:ext="edit" data="1"/>
+ </u4:shapelayout>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor="white" lang="ES-VE" link="#FF0000" vlink="#FFA87D" style="tab-interval:
+35.4pt" alink="#FF0000">
+
+<div class="Section1" style="z-index: 1">
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><i style="mso-bidi-font-style:normal"><span lang="ES" style="font-size:
+18.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+ES"><a name="0"></a></span></i></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center">&nbsp;</p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><i style="mso-bidi-font-style:normal"><span lang="ES" style="font-size:
+18.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+ES">Redes Neuronales Artificiales<u5:p></u5:p></span></i></b><span lang="ES" style="font-size:16.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:ES"><u5:p>&nbsp;</u5:p></span></p>
+
+<p class="MsoNormal" style="margin-left:35.4pt"><b><span lang="ES" style="font-size:13.5pt;font-family:Arial;mso-ansi-language:ES">Clase 1</span></b></p>
+
+<p class="MsoNormal" style="margin-left:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">ASPECTOS INTRODUCTORIOS DE
+COMPUTACIÓN NEURONAL</span></b></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<p class="vineta"><!--[if !supportLists]--><span style="font-size:8.0pt;font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><!--[endif]--><!--[if !supportLists]--><span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt; font-family:Times New Roman; mso-list:Ignore; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">
+</span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#7" style="color: red; text-decoration: underline; text-underline: single"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Neuronas Biológicas</span></a><u5:p></u5:p></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]-->
+<span style="mso-list:Ignore; font-size:8.0pt; font-family:Symbol; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#8" style="color: red; text-decoration: underline; text-underline: single"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Esquema de una Neurona y de la Sinapsis</span></a><u5:p></u5:p></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]-->
+<span style="mso-list:Ignore; font-size:8.0pt; font-family:Symbol; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#9" style="color: red; text-decoration: underline; text-underline: single"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Diagrama en Bloques de un Sistema de
+Procesamiento Basado en una Red Neuronal</span></a></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]--><!--[endif]--><!--[if !supportLists]-->
+<span style="mso-list:Ignore; font-size:8.0pt; font-family:Symbol; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><!--[if !supportLists]-->
+<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt; font-family:Times New Roman; mso-list:Ignore; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">&nbsp;</span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES"><a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#1"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Definiciones de Computación Neuronal
+
+</span></a></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]-->
+<span style="mso-list:Ignore; font-size:8.0pt; font-family:Symbol; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES"><a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#4"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Características Básicas de las Redes
+Neuronales Artificiales</span></a><u5:p></u5:p></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]--><span style="font-size:8.0pt;font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES"><a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#5"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Propiedades de la Redes Neuronales
+Artificiales</span></a><u5:p></u5:p></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]--><span style="font-size:8.0pt;font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES"><a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#6"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Aprendizaje en Computación Neuronal</span></a><u5:p></u5:p></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]--><span style="font-size:8.0pt;font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><!--[endif]--><!--[if !supportLists]--><span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt; font-family:Times New Roman; mso-list:Ignore; mso-fareast-font-family:Symbol; mso-bidi-font-family:Symbol">
+</span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES"><a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#10"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Primer Modelo Histórico de una Red Neuronal
+Artificial (</span><span style="font-size:10.0pt;font-family:
+Arial;color:#CC0000"> Modelo de McCulloch y Pitts, 1943 )</span></a><u5:p></u5:p></span></b></p>
+
+<p class="vineta"><!--[if !supportLists]--><span style="font-size:8.0pt;font-family:
+Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><span lang="ES" style="mso-ansi-language:ES"><a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#11"><span style="font-size:10.0pt;
+font-family:Arial;color:#CC0000">Aspectos y Omisiones del Modelo de McCulloch y
+Pitts</span></a><u5:p></u5:p></span></b></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><span lang="ES" style="mso-ansi-language:ES"><u5:p>&nbsp;</u5:p></span></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><span lang="ES" style="mso-ansi-language:ES"><u5:p>&nbsp;</u5:p></span></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt">
+<a name="7"></a></p>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">Neuronas Biológicas</span></b> &nbsp;</p><p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt" class="MsoNormal">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/El%20A%20B%20C%20de%20la%20Neurona.htm">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image002.gif" width="70" height="44"></a></p>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt" class="MsoNormal">
+<span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">En la siguiente figura se muestran las partes de una 
+neurona biológica: </span></p>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt" class="MsoNormal">
+&nbsp;</p>
+
+<div align="center">
+
+<u5:p></u5:p><u5:p></u5:p><table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" style="border-width:0; border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
+  <td width="340" valign="top" style="border-style:none; border-width:medium; width:9.0cm;padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm">
+  <p align="center" style="margin-right:30.6pt;">
+  <img border="0" src="./Redes Neuronales Artificiales I_files/image26.gif" width="254" height="540"><img border="0" src="./Redes Neuronales Artificiales I_files/image003.bmp" width="144" height="217"></p>
+  <u5:p></u5:p>
+  </td>
+  
+  <td width="416" valign="top" style="border-style:none; border-width:medium; width:9cm;padding-left:5.4pt; padding-right:5.4pt; padding-top:0cm; padding-bottom:0cm">
+  <p align="center" style="margin-right:30.6pt;text-align:center">
+  <img border="0" src="./Redes Neuronales Artificiales I_files/image004.gif" width="256" height="548"></p>
+  <p align="center" style="margin-right:30.6pt;text-align:center">
+  <img border="0" src="./Redes Neuronales Artificiales I_files/image005.bmp" width="355" height="127"></p>
+  <u5:p></u5:p>
+  </td>
+ </tr>
+ 
+</tbody></table>
+
+</div>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES"><u5:p>&nbsp;</u5:p></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt"><a name="8"></a></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<h3><span lang="ES" style="mso-ansi-language:ES">Esquema de una Neurona y de la
+Sinapsis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></h3>
+
+<p>&nbsp;</p>
+
+<p class="MsoNormal" align="center" style="mso-margin-top-alt:auto;margin-right:
+36.0pt;mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:center">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image006.gif" width="469" height="510"></p>
+
+<u5:p></u5:p>
+
+<h1 style="text-indent:35.4pt; text-align:left"><span lang="ES" style="mso-ansi-language:ES">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/1_1_%20COMUNICACI%C3%93N%20NEURONAL%20-%20N3%20Participaci%C3%B3n%20Funcional%20-%20psicobiologia%20net.htm" style="color: red; text-decoration: underline; text-underline: single">
+Sinapsis</a></span></h1>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoBlockText"><a name="9"></a></p>
+
+<p class="MsoBlockText"><span lang="ES" style="mso-ansi-language:ES">Diagrama en
+Bloques de un Sistema de Procesamiento Basado en una RNA<u5:p></u5:p></span></p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image007.JPG" width="550" height="325"></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoBlockText"><span lang="es">Principios de Funcionamiento de una RNA</span></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><span style="font-size: 10.0pt; font-family: Arial">
+Dada altura y cociente intelectual de un conjunto de personas, determinar 
+¿cuándo un persona es jugadora de baloncesto o de ajedrez?</span></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><span style="font-size: 10.0pt; font-family: Arial">
+Cada objeto individual se convierte en vectores numéricos. Esta operación 
+consiste en la extracción o cálculo de características, rasgos diferenciadores,&nbsp; 
+del objeto. Estas características&nbsp; se almacenan o representan en vectores, 
+donde cada componente es un número real que cuantifica, para un objeto en 
+particular, la característica correspondiente. </span></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><font size="2"><span style="font-family: Arial">Cada 
+vector de características&nbsp; asociado a un objeto individual es comparado con&nbsp; 
+los vectores prototipos de cada posible objeto previamente definido. El 
+reconocimiento o clasificación del nuevo objeto se basa en el cálculo del grado 
+de semejanza que exista entre ambos.</span></font></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><font size="2"><span style="font-family: Arial">En el 
+problema a resolver, para cada objeto o individuo se extraen dos características
+</span></font><span style="font-size: 10.0pt; font-family: Arial">o rasgos 
+diferenciadores: </span><font size="2"><span style="font-family: Arial"><i>altura y 
+coeficiente intelectual</i>. </span></font></p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="985" id="AutoNumber4">
+  <tbody><tr>
+    <td width="493" style="border-style: none; border-width: medium">
+
+<p class="MsoNormal" style="text-indent:35.4pt">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image008.bmp" width="389" height="275"></p>
+
+    </td>
+    <td width="489" style="text-align: justify; border-style: none; border-width: medium; margin-left: 0; margin-right: 0">
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+10pt;text-align:justify"><font size="2"><span style="font-family: Arial">Si se 
+representa en un plano a estos individuos, cada jugador será reducido a un un 
+vector bidimensional de características, tal y como se muestra en la figura.
+</span></font></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+10pt;text-align:justify"><font size="2"><span style="font-family: Arial">En la 
+figura se ha trazado una recta para representar la función discriminante. Esta 
+función divide el plano de características&nbsp; en dos semiplanos 
+correspondiente a cada uno de las clases: <i>jugadores de baloncesto, jugadores 
+de ajedrez</i>.</span></font></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+10pt;text-align:justify"><font size="2"><span style="font-family: Arial">En este 
+caso existe una separabilidad lineal de las clases.</span></font></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+10pt;text-align:justify"><font size="2"><span style="font-family: Arial">La 
+ecuación de la función discriminante se expresa como el producto escalar de dos 
+vectores, donde el superíndice T indica que se trata de un vector traspuesto:</span></font></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+10pt;text-align:justify">
+<img border="0" src="./Redes Neuronales Artificiales I_files/RNA01.3.gif" width="326" height="95"></p>
+
+    </td>
+  </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><font size="2"><span style="font-family: Arial">Los 
+puntos que se encuentren en uno de los semiplanos producen un signo (positivo o 
+negativo) uniforme para la función. Los que se encuentren sobre la recta 
+discriminante producirán un valor de la función igual a cero. </span></font></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><font size="2"><span style="font-family: Arial">El 
+anterior planteamiento del problema del reconocimiento de formas conduce a una 
+solución lineal basada en una regionalización de las clases. </span></font></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="100%" id="AutoNumber5">
+  <tbody><tr>
+    <td width="33%" style="border-style: none; border-width: medium">
+    <p style="margin-left: 50; margin-right: 10" align="justify"><font size="2">
+    <span style="font-family: Arial">Una red de una capa con una unidad de 
+    procesamiento o neurona puede 
+    ser construida&nbsp; para crear un clasificador que decida cuando el vector 
+    de características, patrón de entrada, pertenece a una de las dos clases.
+    </span></font></p>
+    <p style="margin-left: 10">&nbsp;</p></td>
+    <td width="20%" style="border-style: none; border-width: medium">
+    <p align="center">
+    <img border="0" src="./Redes Neuronales Artificiales I_files/RNA01.1.gif" width="192" height="138"></p></td>
+    <td width="50%" style="border-style: none; border-width: medium">
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+10pt;text-align:justify"><font size="2"><span style="font-family: Arial">La 
+regla de decisión a ser usada indicará que la red responderá a una de las clases 
+si la salida S es alta o mayor a cero y responderá a la otra si&nbsp; la salida 
+S es baja o menor a cero.</span></font></p>
+
+    <p align="center">
+    <img border="0" src="./Redes Neuronales Artificiales I_files/RNA01.2.gif" width="300" height="85"></p></td>
+  </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="text-indent:35.4pt">
+&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify"><a name="1"></a></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">Definiciones de
+Computación Neuronal ( Hecht&#8209;Nielsen )</span></b></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<ol style="font-family: Arial; font-size: 10pt; margin-top: 10; margin-bottom: 10" type="i">
+  <li>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify; margin-bottom:10"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Las redes neuronales artificiales son 
+simulaciones de estructuras cognitivas de procesamiento de información, basadas 
+en modelos de las funciones cerebrales. </span></p>
+
+  </li>
+  <li>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify; margin-bottom:10"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Las redes neuronales artificiales son
+arreglos de unidades de procesamiento (UP o neuronas) interconectadas entre
+sí. Las UP puede tener muchas entradas, pero sólo tienen una salida. Las
+entradas de las UP son copias de las señales de salida de otras UP o
+señales externas. La dinámica de las UP se especifica a través de ecuaciones
+diferenciales ordinarias de primer orden en la variable de salida, o, en el caso
+de tiempo discreto, a través de ecuaciones en diferencias.</span></p>
+
+  </li>
+  <li>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify; margin-bottom:10"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">En un contexto más ingenieril,&nbsp; </span><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">las redes neuronales artificiales</span><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES"> constituyen un sistema dinámico en 
+extremo paralelo, con la estructura de un grafo dirigido, que ejecuta el 
+procesamiento de la información en términos de su respuesta o reacción a una 
+entrada o estímulo externo, continuo o discreto.</span></p>
+
+  </li>
+</ol>
+
+<u5:p></u5:p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">Definición de
+Computación Neuronal (Teuvo Kohonen)</span></b></p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">Las redes neuronales artificiales son estructuras
+interconectadas de unidades de procesamiento simples (generalmente adaptables).
+Estos dispositivos son masivamente paralelos y de organización jerárquica.
+Deben interactuar con los objetos del mundo real de la misma forma en que lo
+hace el sistema nervioso biológico.</span></p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">Definición de Computación
+Neuronal (en Ingeniería)</span></b></p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">Las redes neuronales artificiales son modelos
+matemáticos multiparamétricos no&#8209;lineales, capaces de inducir una
+correspondencia entre conjuntos de patrones de información, - la relación
+estímulo&#8209;respuesta -. El procesamiento de la información se realiza a la
+manera de los sistemas neuronales biológicos.</span></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;&nbsp;&nbsp; </p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify"><a name="4"></a></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">Características Básicas
+de las Redes Neuronales Artificiales</span></b><span lang="ES" style="mso-ansi-language:
+ES"> </span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36.0pt;text-align:justify">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<ol style="font-family: Arial; font-size: 10pt; line-height: 100%; margin-top: 10; margin-bottom: 10" type="i">
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Estructura de grafo dirigido.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Una unidad de procesamiento en cada vértice del grafo.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Las aristas o enlaces indican el flujo de la información.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Un peso sináptico por enlace.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Cada UP posee una función de transferencia, o función
+de activación,&nbsp; no&#8209;lineal.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">El estado del sistema lo define el conjunto de
+actividades de las UP</span></p>
+
+  </li>
+</ol>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+72.0pt;text-align:justify;text-indent:-36.0pt;mso-list:l6 level1 lfo6;
+tab-stops:list 72.0pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<h1><a name="5"></a></h1>
+
+<p>&nbsp;</p>
+
+<h1><span lang="ES" style="mso-ansi-language:ES">Propiedades de las
+Redes Neuronales Artificiales<u5:p></u5:p></span></h1>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">Las Redes Neuronales Artificiales (RNA)
+constituyen poderosos dispositivos de cómputo, en gran parte por las siguientes
+propiedades: </span></p>
+
+<ol style="font-family: Arial; font-size: 10pt; margin-top: 5; margin-bottom: 5" type="i">
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Están conformadas por un conjunto de 
+unidades de procesamiento bien sencillas que se comunican a través de una vasta 
+red de interconexiones con pesos sinápticos adaptables (variables). </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Las memorias (información) se almacenan
+o representan en el patrón de pesos de las interconexiones de las UP. El
+procesamiento de la información ocurre basándose en la variación del patrón de
+actividades de las UP, distribuido a lo largo de todo el dispositivo. </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Las redes neuronales no se programan,
+más bien aprenden o se entrenan en la tarea que ha de computarse. En algunos
+casos es posible la implementación de dispositivos capaces de aprendizaje
+independiente o autónomo. Ciertas redes aprenden por ensayo y error. </span><!--[if !supportLists]-->
+<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt; font-family:Times New Roman; mso-list:Ignore; mso-bidi-font-size:12.0pt; mso-fareast-font-family:Arial">&nbsp;</span><!--[endif]--></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><!--[if !supportLists]--><!--[endif]--><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">No operan según el esquema tradicional
+de computación (von Neumann: un sistema de memoria, una unidad de proceso
+central más un programa externo que determina la operación). En una RNA la
+operación viene determinada por las siguientes propiedades: </span><span lang="ES" style="font-size:
+10.0pt;font-family:Arial;mso-ansi-language:ES">&nbsp;</span></p>
+
+  <blockquote>
+
+<ul type="disc">
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:
+10.0pt;font-family:Arial;mso-ansi-language:ES">La función de transferencia, o
+función de activación,&nbsp; de las UP&nbsp; </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:
+10.0pt;font-family:Arial;mso-ansi-language:ES">El detalle de la estructura del
+conjunto de conexiones sinápticas entre las UP<u5:p> </u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:
+10.0pt;font-family:Arial;mso-ansi-language:ES">La regla dinámica de la red.<u5:p> </u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:
+10.0pt;font-family:Arial;mso-ansi-language:ES">La ley de aprendizaje o de
+entrenamiento que se aplica. </span></p>
+
+  </li>
+</ul>
+
+  </blockquote>
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Una RNA actúa naturalmente como una 
+memoria asociativa. Es decir, esencialmente asocia entre sí los patrones
+con los cuales se entrena, agrupando físicamente en su estructura patrones
+similares.&nbsp; Una RNA que opere como memoria asociativa tiene acceso a la
+información por contenido, en tal sentido es capaz de recuperar información a partir
+de estímulos incompletos, ruidosos o parcialmente erróneos (estímulos
+contaminados). </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Una RNA tiene la capacidad de
+generalización; es decir, es capaz de aprenderse las características de una
+categoría general de patrones, basándose en una serie de ejemplos específicos
+de la categoría. </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Son, en gran medida, tolerantes a las 
+fallas de sus componentes. Una RNA mantiene un grado satisfactorio de
+ejecución aun luego de remover o deteriorar una fracción significativa de sus UP o interconexiones. A medida que el deterioro progresa, el desempeño de
+estos dispositivos empeora lenta y suavemente, esto suele denominarse
+“degradación graciosa”. </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Pueden operar naturalmente como
+procesadores de patrones espacio&#8209;temporales. </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Pueden poseer la propiedad de autoorganización,
+es decir algunas RNAs son capaces de organizar y adaptar sus conexiones
+sinápticas sin necesidad de que se les provea durante el entrenamiento de
+instrucciones acerca de qué aprender. </span></p>
+
+  </li>
+</ol>
+
+<p style="margin-top:0;margin-right:30.6pt;margin-bottom:10;margin-left:
+36.0pt;text-align:justify">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:36.0pt;
+mso-margin-bottom-alt:auto;text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<h1><a name="6"></a></h1>
+
+<p>&nbsp;</p>
+
+<h1><span lang="ES" style="mso-ansi-language:ES">Aprendizaje en
+Computación Neuronal<u5:p></u5:p></span></h1>
+
+<p style="margin-right:30.6pt;text-align:justify;margin-left:36pt"><span lang="ES" style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:ES">Aprendizaje es el mejoramiento </span><span lang="ES" style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:ES">progresivo de la ejecución o desempeño del sistema, de 
+acuerdo con algún criterio de calidad.</span></p>
+
+<p style="margin-right:30.6pt;text-align:justify;margin-left:36pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">En la
+Computación Neuronal pueden distinguirse dos clases de dispositivos</span><span lang="ES" style="font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;
+mso-ansi-language:ES">:</span></p>
+
+<ol type="i" style="font-family: Arial; font-size: 10pt; margin-top: 5; margin-bottom: 5">
+  <li>
+
+<p style="margin-right:30.6pt;text-align:justify;margin-left:36pt; margin-top:0; margin-bottom:10"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Con formación adaptable de los enlaces entre las UP<u5:p>. </u5:p></span></p>
+
+<p style="margin-right:30.6pt;text-align:justify;margin-left:36pt; margin-top:0; margin-bottom:10"><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">- Esta es 
+La única alternativa para incluir la habilidad de&nbsp;&nbsp;aprender -. </span></p>
+
+  </li>
+  <li>
+
+<p style="margin-right:30.6pt;text-align:justify;margin-left:36pt; margin-top:0; margin-bottom:10"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">De parámetros invariantes en el tiempo.</span></p>
+
+  </li>
+</ol>
+
+<p style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;text-align:justify;text-indent:35.4pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">El 
+Aprendizaje puede ser clasificado en los siguientes tipos:</span></p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-size: 10pt; border-width: 0" bordercolor="#111111" width="100%" id="AutoNumber3">
+  <tbody><tr>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="15%" style="border-style: none; border-width: medium">
+    <ul>
+      <li><font face="Arial">SUPERVISADO</font></li>
+    </ul>
+    </td>
+    <td width="35%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="15%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="35%" style="border-style: none; border-width: medium">
+    <font face="Arial">Únicamente modificación de los Parámetros</font></td>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="15%" style="border-style: none; border-width: medium">
+    <ul>
+      <li><font face="Arial">NO SUPERVISADO</font></li>
+    </ul>
+    </td>
+    <td width="35%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="15%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="35%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+    <td width="15%" style="border-style: none; border-width: medium">
+    <ul>
+      <li><font face="Arial">AUTOORGANIZATIVO</font></li>
+    </ul>
+    </td>
+    <td width="35%" style="border-style: none; border-width: medium">
+    <font face="Arial">Determinación de la estructura u orden del sistema</font></td>
+    <td width="5%" style="border-style: none; border-width: medium">&nbsp;</td>
+  </tr>
+</tbody></table>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<h2><span lang="ES" style="mso-ansi-language:ES">APRENDIZAJE SUPERVISADO<u5:p></u5:p></span></h2>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">A cada unidad
+de proceso se le instruye la respuesta requerida, para cada señal específica de
+entrada.</span></p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:36.0pt;margin-bottom:5.0pt;margin-left:
+36.0pt"><b><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:
+ES">ESQUEMA: ESTÍMULO-RESPUESTA</span></b></p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify" class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">Funciona en arquitecturas de una y más capas
+(presencia de unidades sin contacto externo) La modificación de los parámetros
+(pesos sinápticos) se realiza, en general, por medio de optimización por
+descenso de gradiente. </span></p>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36.0pt;text-align:justify" class="MsoNormal">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify" class="MsoNormal"><b><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">APRENDIZAJE NO&#8209;SUPERVISADO Y AUTOORGANIZATIVO</span></b></p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify" class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">La no&#8209;supervisión indica la ausencia de un
+maestro externo, el cual se compensa con la competencia o cooperación entre UP vecinas para responder a un estímulo. Este proceso conduce a un agrupamiento
+de la información.<u5:p></u5:p></span></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify" class="MsoNormal">&nbsp;</p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+36.0pt;text-align:justify" class="MsoNormal"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">La autoorganización requiere de la definición de
+una función de energía (<i>Lyapunov</i>) dependiente de las variables de estado
+del sistema. El aprendizaje se torna en una suerte de relajación del sistema a
+un estado de mínima energía.</span></p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><a name="10"></a></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">&nbsp;</p>
+
+<u5:p></u5:p>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt"><b>
+<span lang="ES" style="font-family: Arial">Primer Modelo Histórico de una 
+Neurona (<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/McCullochPitts.doc">McCulloch y Pitts</a>, 1943)</span></b></p>
+
+<u5:p></u5:p>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal" style="margin-left:36.0pt"><span lang="ES" style="mso-ansi-language:
+ES"><u5:p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="./Redes Neuronales Artificiales I_files/image011.gif" width="402" height="254">&nbsp;</u5:p></span><span style="font-size: 12.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p class="MsoNormal" style="margin-left:36.0pt">&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-width: 0" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tbody><tr>
+    <td width="5%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">&nbsp;</p></td>
+    <td width="25%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10"><span lang="es"><font size="2" face="Arial">Vector de Entradas&nbsp;
+    </font><font size="2">&nbsp;&nbsp;
+    <img border="0" src="./Redes Neuronales Artificiales I_files/image012.gif" width="21" height="23"></font></span></p></td>
+    <td width="25%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10"><span lang="es"><font size="2" face="Arial">&nbsp;Vector 
+    de Pesos Sinápticos&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2">
+    <img border="0" src="./Redes Neuronales Artificiales I_files/image013.gif" width="23" height="24"></font></span></p></td>
+    <td width="5%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">&nbsp;</p></td>
+    <td width="25%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">
+    <span lang="ES" style="font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:ES"><font size="2">Activación&nbsp;&nbsp;&nbsp;&nbsp; </font><span style="mso-spacerun:yes">
+    <font size="2">
+    <img border="0" src="./Redes Neuronales Artificiales I_files/image014.gif" width="84" height="24"></font></span></span></p></td>
+    <td width="25%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">
+    <span lang="ES" style="font-family:Arial;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:ES"><font size="2">Salida<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span></font><span style="mso-spacerun:yes"><font size="2">
+    <img border="0" src="./Redes Neuronales Artificiales I_files/image015.gif" width="115" height="24"></font></span></span></p></td>
+    <td width="5%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td width="5%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">&nbsp;</p></td>
+    <td width="50%" colspan="2" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">
+    <span style="font-family: Arial; mso-bidi-font-family: Times New Roman; mso-ansi-language: ES" lang="ES">
+    <font size="2">Función de Activación o de Transferencia es&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><span style="mso-spacerun:yes"><font size="2">
+    <img border="0" src="./Redes Neuronales Artificiales I_files/image016.gif" width="173" height="56"></font></span></span></p></td>
+    <td width="5%" style="border-style: none; border-width: medium">
+    <p style="margin-bottom: 10">&nbsp;</p></td>
+  </tr>
+</tbody></table>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal"><span lang="ES" style="font-size:16.0pt;font-family:Arial;
+mso-ansi-language:ES"><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;</p>
+
+<p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a name="11"></a></p>
+
+<p style="margin-right:30.6pt;text-align:justify;text-indent:35.4pt"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES">Aspectos del modelo de
+McCulloch y Pitts</span></b></p>
+
+<u5:p></u5:p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+35.4pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;font-family:
+Arial;mso-ansi-language:ES">Para una red conformada por esta clase de UP
+las actividades se evalúan en tiempo discreto, de acuerdo con las siguientes
+ecuaciones:</span></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+35.4pt;text-align:justify">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image017.gif" width="244" height="60"></p>
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+35.4pt;text-align:justify">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image018.gif" width="179" height="56"></p>
+
+<p class="MsoNormal" style="margin-left:72.0pt"><span lang="ES" style="mso-ansi-language:
+ES"><u5:p>&nbsp;</u5:p></span><o:p></o:p></p>
+
+<p class="MsoNormal" style="margin-left:72.0pt"><span lang="ES" style="mso-ansi-language:
+ES"><u5:p>&nbsp;</u5:p></span></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify"><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">Se ha
+demostrado que una configuración sincrónica de UP de este tipo tiene la
+capacidad de computación universal.</span></p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify">&nbsp;</p>
+
+<p class="MsoNormal" style="margin-top:0cm;margin-right:30.6pt;margin-bottom:
+0cm;margin-left:35.4pt;margin-bottom:.0001pt;text-align:justify"><span lang="ES" style="font-size:
+10.0pt;font-family:Arial;mso-ansi-language:ES">A este modelo se le pueden
+imputar las siguientes deficiencias básicas:</span></p>
+
+<u5:p></u5:p>
+
+<ol style="font-family: Arial; font-size: 10pt; margin-top: 5; margin-bottom: 5" type="i">
+  <li>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36pt;text-align:justify;text-indent:
+0pt;mso-list:l5 level1 lfo14;tab-stops:list 71.4pt; margin-bottom:10pt"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">No se indica en la teoría cómo se
+organiza el dispositivo o cómo se ajustan los pesos y umbrales de las UP En
+otras palabras, no se incluye ningún proceso de aprendizaje.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36pt;text-align:justify;text-indent:
+0pt;mso-list:l5 level1 lfo14;tab-stops:list 71.4pt; margin-bottom:10pt"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">No son sistemas robustos, ya que están
+supeditados al funcionamiento de todas sus partes. Al contrario de su
+inspiración natural, son muy sensibles a las fallas.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;margin-right:30.6pt;
+mso-margin-bottom-alt:auto;margin-left:36pt;text-align:justify;text-indent:
+0pt;mso-list:l5 level1 lfo14;tab-stops:list 71.4pt; margin-bottom:10pt"><span lang="ES" style="font-size:10.0pt;
+font-family:Arial;mso-ansi-language:ES">Son muy simples, omiten muchos aspectos
+interesantes de las neuronas.</span><o:p></o:p></p>
+
+  </li>
+</ol>
+
+<u5:p></u5:p>
+
+<p class="MsoNormal"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:
+ES"><u5:p>&nbsp;</u5:p></span></b><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES"><u5:p>&nbsp;</u5:p></span></b><o:p></o:p></p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><b><span lang="ES" style="font-family:Arial;mso-ansi-language:ES"><u5:p>&nbsp;</u5:p></span></b></p>
+
+<h3><span lang="ES" style="mso-ansi-language:ES">Omisiones importantes del modelo
+de McCulloch y Pitts<u5:p></u5:p></span></h3>
+
+<ol type="i" style="font-family: Arial; font-size: 10pt">
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Las neuronas reales no son, en lo más mínimo,
+unidades de umbral. Son más bien unidades de respuesta continua.<u5:p></u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><!--[if !supportLists]-->
+<span style="font-style:normal; font-variant:normal; font-weight:normal; font-size:7.0pt; font-family:Times New Roman; mso-list:Ignore">&nbsp;</span><!--[endif]--><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Es de importancia la relación no&#8209;lineal
+entre la entrada y la salida (constituye un rasgo universal en las neuronas).<u5:p></u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">El "cómputo" es más complejo, puede hasta
+llegar a ser una sumatoria no&#8209;lineal con apreciable procesamiento
+dendrítico previo.<u5:p></u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">Responden con una secuencia de pulsos, no con un solo
+nivel de salida representativo del índice de disparo.<u5:p></u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><span lang="ES" style="font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-ansi-language:ES">Aún con una salida continua, se
+ignora mucha información, tal como la fase de la secuencia de pulsos.</span></p>
+
+  </li>
+
+<u5:p></u5:p>
+
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><span lang="ES" style="font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-ansi-language:ES">No todas las neuronas responden
+con un retardo constante, </span><i><span lang="ES" style="font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-ansi-language:ES">t</span></i><span lang="ES" style="font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-ansi-language:
+ES"> </span><span lang="ES" style="font-size:10.0pt;mso-bidi-font-size:8.5pt;
+font-family:Symbol;color:windowtext;mso-ansi-language:ES">®</span><span lang="ES" style="font-size:10.0pt;mso-bidi-font-size:8.0pt;font-family:Arial;
+mso-bidi-font-family:&quot;MS Shell Dlg&quot;;color:windowtext;mso-ansi-language:ES"> </span><i><span lang="ES" style="font-size:10.0pt;mso-ansi-language:ES">t</span></i><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES"> </span><span lang="ES" style="font-size:10.0pt;font-family:Symbol;mso-ansi-language:ES">+</span><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES"> </span><span lang="ES" style="font-size:10.0pt;font-family:Symbol;mso-ansi-language:ES">1</span><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">.
+Tampoco son sincrónicas, siguiendo un reloj central.<u5:p></u5:p></span></p>
+
+  </li>
+  <li>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt"><span lang="ES" style="font-size:10.0pt;font-family:Arial;
+mso-ansi-language:ES">La cantidad de neurotransmisores segregados en una
+sinapsis puede variar de manera impredecible. Por lo que el modelado podría
+involucrar una componente estocástica en la dinámica.<u5:p></u5:p></span></p>
+
+  </li>
+</ol>
+
+<p style="margin-top:0pt;margin-right:30.6pt;margin-bottom:10pt;margin-left:
+36pt;text-align:justify;text-indent:pt;mso-list:l1 level1 lfo16;
+tab-stops:list 71.4pt">&nbsp;</p>
+
+</div>
+
+
+<p style="margin-top:5.0pt;margin-right:30.6pt;margin-bottom:5.0pt;margin-left:
+35.4pt;text-align:justify"><b><span lang="ES" style="font-size:10.0pt;font-family:Arial;mso-ansi-language:ES">Se han
+propuesto generalizaciones.</span></b></p>
+
+<p style="text-align: justify; margin-left: 35.4pt; margin-right: 30.6pt; margin-top: 5.0pt; margin-bottom: 5.0pt">&nbsp;</p>
+<p style="text-align: justify; margin-left: 35.4pt; margin-right: 30.6pt; margin-top: 5.0pt; margin-bottom: 5.0pt">
+<a href="file:///E:/Respaldo%20Maritza%20Bracho/Disco%20C%20anteior/E%20a%20D%20Lenguajes/RNA2011/clase01/RNA01.html#0" style="color: red; text-decoration: underline; text-underline: single">
+<img border="0" src="./Redes Neuronales Artificiales I_files/image003.gif" width="23" height="21"></a></p>
+
+
+
+</body></html>
